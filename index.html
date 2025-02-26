@@ -12,10 +12,27 @@
     background-position: center;
     background-attachment: fixed; /* Keeps it still when scrolling */
   }
+        @keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+  margin-top: 20%;
+  color: white;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
 </style>
 
 </head>
 <body>
+    <h1>YDZ</h1>
+
+    <h1 id="title"></h1>
+
     <header>
         <h1>YDZ</h1>
         <nav>
@@ -35,4 +52,22 @@
         <p>&copy; 2025 Yuanda Zhang | Built with devotion</p>
     </footer>
 </body>
+    <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    let title = "YDZ";
+    let index = 0;
+    let titleElement = document.getElementById("title");
+
+    function typeEffect() {
+      if (index < title.length) {
+        titleElement.innerHTML += title[index];
+        index++;
+        setTimeout(typeEffect, 300); // Adjust speed
+      }
+    }
+
+    typeEffect();
+  });
+</script>
+
 </html>
