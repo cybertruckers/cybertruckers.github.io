@@ -6,17 +6,29 @@
     <title>World of YDZ</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Background Image */
+        /* Reset Page */
         body {
-            background-image: url('pumpkinbowlbg.jpg'); /* Make sure this file exists */
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
             min-height: 100vh; /* Ensures full page height */
+        }
+
+        /* Background Images */
+        .background {
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .bg1 {
+            background-image: url('pumpkinbowlbg.jpg'); /* Top image */
+        }
+
+        .bg2 {
+            background-image: url('beachbg.jpg'); /* Second image */
         }
 
         /* Transparent Title Bar */
@@ -28,13 +40,7 @@
             color: white;
             padding: 15px 0;
             text-align: center;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 18px;
+            font-size: 24px;
         }
 
         /* Animated Title */
@@ -44,22 +50,11 @@
         }
 
         .animated-title {
-            font-size: 50px;
-            text-align: center;
-            margin-top: 150px; /* Adjusted spacing */
-            color: white;
+            display: inline-block;
             animation: fadeIn 1.5s ease-in-out;
         }
 
-        /* Content to Make Page Scrollable */
-        .content {
-            flex: 1; /* Pushes footer to bottom */
-            text-align: center;
-            padding: 100px 20px;
-            min-height: 80vh; /* Ensures there's enough content */
-        }
-
-        /* Footer Stays at Bottom */
+        /* Footer Always at Bottom */
         footer {
             width: 100%;
             background: black;
@@ -74,26 +69,14 @@
 </head>
 <body>
 
-    <!-- Transparent Header -->
+    <!-- Transparent Title Bar with Animated YDZ -->
     <header>
-        <h1>YDZ</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+        <h1 class="animated-title" id="title"></h1>
     </header>
 
-    <!-- Animated Title -->
-    <h1 class="animated-title" id="title"></h1>
-
-    <!-- Main Content (Creates Scrollable Effect) -->
-    <div class="content">
-        <h2>Coming Soon...</h2>
-        <p>Check back on my web world!</p>
-        <a href="about.html" class="btn">Learn More</a>
-        <p style="margin-top: 300px;"> <!-- This adds extra space for scrolling --></p>
-    </div>
+    <!-- Background Sections -->
+    <div class="background bg1"></div>
+    <div class="background bg2"></div>
 
     <!-- Footer Always at Bottom -->
     <footer>
@@ -121,4 +104,3 @@
 
 </body>
 </html>
-
