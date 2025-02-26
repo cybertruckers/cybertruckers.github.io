@@ -8,10 +8,33 @@
     <style>
         /* Background Image */
         body {
-            background-image: url('pumpkinbowlbg.jpg'); /* Ensure correct file extension */
+            background-image: url('pumpkinbowlbg.jpg'); /* Make sure this file exists */
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensures full page height */
+        }
+
+        /* Transparent Title Bar */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Transparent black */
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
         }
 
         /* Animated Title */
@@ -23,33 +46,35 @@
         .animated-title {
             font-size: 50px;
             text-align: center;
-            margin-top: 20%;
+            margin-top: 150px; /* Adjusted spacing */
             color: white;
             animation: fadeIn 1.5s ease-in-out;
         }
 
-        /* Hero Section */
-        .hero {
+        /* Content to Make Page Scrollable */
+        .content {
+            flex: 1; /* Pushes footer to bottom */
             text-align: center;
-            margin-top: 50px;
+            padding: 100px 20px;
+            min-height: 80vh; /* Ensures there's enough content */
         }
 
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #ff6600;
+        /* Footer Stays at Bottom */
+        footer {
+            width: 100%;
+            background: black;
             color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 10px;
+            text-align: center;
+            padding: 15px 0;
+            position: relative;
+            bottom: 0;
         }
 
     </style>
 </head>
 <body>
-    <!-- Animated Title -->
-    <h1 class="animated-title" id="title"></h1>
 
+    <!-- Transparent Header -->
     <header>
         <h1>YDZ</h1>
         <nav>
@@ -59,16 +84,23 @@
         </nav>
     </header>
 
-    <section class="hero">
+    <!-- Animated Title -->
+    <h1 class="animated-title" id="title"></h1>
+
+    <!-- Main Content (Creates Scrollable Effect) -->
+    <div class="content">
         <h2>Coming Soon...</h2>
         <p>Check back on my web world!</p>
         <a href="about.html" class="btn">Learn More</a>
-    </section>
+        <p style="margin-top: 300px;"> <!-- This adds extra space for scrolling --></p>
+    </div>
 
+    <!-- Footer Always at Bottom -->
     <footer>
         <p>&copy; 2025 Yuanda Zhang | Built with devotion</p>
     </footer>
 
+    <!-- Typing Effect Script -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             let title = "YDZ";
@@ -86,5 +118,7 @@
             typeEffect();
         });
     </script>
+
 </body>
 </html>
+
