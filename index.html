@@ -51,20 +51,18 @@
             z-index: 10;
         }
 
-        /* Logo Placeholder */
-        .logo-placeholder {
+        /* Logo Image */
+        .logo {
             width: 40px;
             height: 40px;
-            border: 2px solid white;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.3);
+            object-fit: contain;
         }
 
         /* Dropdown Menu */
         .dropdown {
             position: relative;
             display: inline-block;
-        }
+        },
         .menu-button {
             background: none;
             border: none;
@@ -108,9 +106,9 @@
     </style>
 </head>
 <body>
-    <!-- Header with Logo Placeholder and Dropdown -->
+    <!-- Header with Logo Image and Dropdown -->
     <header>
-        <div class="logo-placeholder"></div>
+        <a href="index.html"><img src="testlogo.png" alt="Logo" class="logo"></a>
         <div class="dropdown">
             <button class="menu-button">☰ Menu</button>
             <div class="dropdown-content">
@@ -120,7 +118,7 @@
         </div>
     </header>
 
-    <!-- Two Stacked Backgrounds -->
+    <!-- Background Sections -->
     <div class="background bg1"></div>
     <div class="background bg2"></div>
 
