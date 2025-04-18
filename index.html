@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>World of YDZ</title>
-    <!-- Removed external CSS to avoid conflicts -->
     <style>
         /* Reset and Layout */
         body {
             margin: 0;
             padding: 0;
             overflow-x: hidden;
-            /* Allow normal document flow for scrolling */
         }
 
         /* Background Sections */
@@ -23,9 +21,7 @@
         }
         .bg1 {
             background-image: url('pumpkinbowlbg.jpeg');
-            position: fixed;
-            top: 0;
-            left: 0;
+            position: relative; /* Changed from fixed to relative */
             width: 100%;
             height: 100vh;
             z-index: -2;
@@ -107,7 +103,7 @@
     </style>
 </head>
 <body>
-    <!-- Header with Logo Image and Dropdown -->
+    <!-- Header with Logo and Dropdown -->
     <header>
         <a href="index.html"><img src="testlogo.png" alt="Logo" class="logo"></a>
         <div class="dropdown">
@@ -123,7 +119,7 @@
     <div class="background bg1"></div>
     <div class="background bg2"></div>
 
-    <!-- Footer Always at Bottom -->
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 Yuanda Zhang | Built with devotion</p>
     </footer>
