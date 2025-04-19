@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
             overflow-x: hidden;
-            overscroll-behavior-y: none; /* Prevent overscroll bounce */
+            overscroll-behavior-y: none;
         }
         
         /* Background Sections: stack without gaps */
@@ -50,7 +50,7 @@
         .dropdown {
             position: absolute;
             top: 50%;
-            right: 70px;
+            right: 20px;
             transform: translateY(-50%);
         }
         .menu-button {
@@ -74,11 +74,14 @@
         .dropdown-content {
             display: none;
             position: absolute;
-            top: 100%; /* Directly below button */
+            top: 100%;
             right: 0;
             background-color: rgba(0,0,0,0.8);
             min-width: 120px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            border-radius: 8px;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
         }
         .dropdown-content a {
             color: white;
@@ -99,10 +102,9 @@
             background: black;
             color: white;
             text-align: center;
-            padding: 15px 0;
+            padding: 8px 0; /* Thinner footer */
             position: relative;
             z-index: 5;
-            font-family: Arial, sans-serif;
         }
     </style>
 </head>
