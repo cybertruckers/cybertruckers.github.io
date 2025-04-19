@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>World of YDZ</title>
     <style>
-        /* Reset, Layout, and Overscroll */
+        /* Reset and Layout */
         html, body {
             margin: 0;
             padding: 0;
             overflow-x: hidden;
-            overscroll-behavior-y: none; /* Prevent bouncing past top */
+            overscroll-behavior-y: none; /* Prevent overscroll bounce */
         }
-
-        /* Background Sections */
+        
+        /* Background Sections: stack without gaps */
         .background {
             width: 100%;
             height: 100vh;
@@ -30,10 +30,10 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 80px; /* Thicker header */
+            height: 100px;
             background: rgba(0, 0, 0, 0.4);
             display: flex;
-            justify-content: center; /* Center the logo */
+            justify-content: center;
             align-items: center;
             padding: 0 20px;
             z-index: 10;
@@ -41,7 +41,7 @@
 
         /* Logo Image */
         .logo {
-            width: 100px; /* Bigger logo */
+            width: 100px;
             height: 100px;
             object-fit: contain;
         }
@@ -50,35 +50,35 @@
         .dropdown {
             position: absolute;
             top: 50%;
-            right: 55px; /* Keep menu visible */
+            right: 20px;
             transform: translateY(-50%);
         }
         .menu-button {
-            width: 24px; /* Smaller hamburger */
+            width: 24px;
             height: 24px;
+            background: none;
+            border: none;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            background: none;
-            border: none;
             padding: 0;
             cursor: pointer;
         }
         .menu-button span {
             display: block;
             width: 100%;
-            height: 3px; /* Thinner lines */
+            height: 3px;
             background: white;
             border-radius: 2px;
         }
         .dropdown-content {
             display: none;
             position: absolute;
+            top: 100%; /* Directly below button */
             right: 0;
             background-color: rgba(0,0,0,0.8);
             min-width: 120px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            margin-top: 10px;
         }
         .dropdown-content a {
             color: white;
@@ -104,19 +104,12 @@
             z-index: 5;
             font-family: Arial, sans-serif;
         }
-        /* Stack backgrounds */
-        .bg1, .bg-ship, .bg2 {
-            position: relative;
-            z-index: -1;
-        }
-        .bg-ship { margin-top: 100vh; }
-        .bg2 { margin-top: 100vh; }
     </style>
 </head>
 <body>
     <!-- Header with Centered Logo and Hamburger Menu -->
     <header>
-        <a href="index.html"><img src="logo1.png" alt="Logo" class="logo"></a>
+        <a href="index.html"><img src="testlogo.png" alt="Logo" class="logo"></a>
         <div class="dropdown">
             <button class="menu-button">
                 <span></span>
