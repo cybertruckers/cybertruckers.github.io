@@ -4,136 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>World of YDZ</title>
-    <style>
-        /* Reset and Layout */
-        html, body {
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-            overscroll-behavior-y: none;
-        }
-        
-        /* Background Sections: stack without gaps */
-        .background {
-            width: 100%;
-            height: 100vh;
-            background-size: cover;
-            background-position: center;
-        }
-        .bg1 { background-image: url('pumpkinbowlbg.jpeg'); }
-        .bg-ship { background-image: url('shipbg.jpeg'); }
-        .bg2 { background-image: url('beachbg.jpeg'); }
-
-        /* Header Bar */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 80px;
-            background: rgba(0, 0, 0, 0.4);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 0 20px;
-            z-index: 10;
-        }
-
-        /* Logo Image */
-        .logo {
-            width: 100px;
-            height: 100px;
-            object-fit: contain;
-        }
-
-        /* Dropdown Menu Positioned Right */
-        .dropdown {
-            position: absolute;
-            top: 50%;
-            right: 70px;
-            transform: translateY(-50%);
-        }
-        .menu-button {
-            width: 24px;
-            height: 24px;
-            background: none;
-            border: none;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            padding: 0;
-            cursor: pointer;
-        }
-        .menu-button span {
-            display: block;
-            width: 100%;
-            height: 3px;
-            background: white;
-            border-radius: 2px;
-        }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            top: 100%;
-            right: 0;
-            background-color: rgba(0,0,0,0.8);
-            min-width: 120px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            border-radius: 8px;
-            font-family: Arial, sans-serif;
-            overflow: hidden;
-        }
-        .dropdown-content a {
-            color: white;
-            padding: 10px;
-            text-decoration: none;
-            display: block;
-            text-align: center;
-        }
-        .dropdown-content a:hover {
-            background: rgba(255,255,255,0.2);
-        }
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        /* Footer */
-        footer {
-            background: black;
-            color: white;
-            text-align: center;
-            padding: 6px 0; /* Thinner footer */
-            position: relative;
-            z-index: 5;
-            font-family: Arial, sans-serif;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header with Centered Logo and Hamburger Menu -->
-    <header>
-        <a href="index.html"><img src="logo1.png" alt="Logo" class="logo"></a>
-        <div class="dropdown">
-            <button class="menu-button">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <div class="dropdown-content">
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-            </div>
+    <header class="nav-bar">
+        <div class="brand">
+            <img src="logo1.png" alt="YDZ logo">
+            <span>World of YDZ</span>
         </div>
+        <nav>
+            <a href="#projects">Projects</a>
+            <a href="#art">Art</a>
+            <a href="about.html">About</a>
+        </nav>
     </header>
 
-    <!-- Background Sections -->
-    <div class="background bg1"></div>
-    <div class="background bg-ship"></div>
-    <div class="background bg2"></div>
+    <section class="hero hero-home" id="top">
+        <div class="content minimal-hero">
+            <h1>Fluid, playful experiments by Yuanda Zhang.</h1>
+            <a class="btn" href="#art">See the art →</a>
+        </div>
+        <span class="easter-egg">Where's Yuanda</span>
+    </section>
 
-    <!-- Footer Always at Bottom -->
-    <footer>
-        <p>&copy; 2025 Yuanda Zhang | Built with devotion</p>
-    </footer>
+    <div id="projects"></div>
+    <div id="art"></div>
 </body>
 </html>
