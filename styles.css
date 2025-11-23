@@ -139,6 +139,12 @@ nav a:focus-visible {
     gap: 28px;
 }
 
+.minimal-hero {
+    text-align: center;
+    justify-items: center;
+    gap: 18px;
+}
+
 .hero h1 {
     font-size: clamp(2.4rem, 4vw + 1rem, 3.6rem);
     margin: 0;
@@ -173,6 +179,18 @@ nav a:focus-visible {
     display: flex;
     gap: 14px;
     flex-wrap: wrap;
+}
+
+.easter-egg {
+    position: absolute;
+    right: 18px;
+    bottom: 18px;
+    font-size: 0.85rem;
+    letter-spacing: 0.6px;
+    color: rgba(255, 255, 255, 0.65);
+    text-transform: uppercase;
+    pointer-events: none;
+    z-index: 1;
 }
 
 .btn {
