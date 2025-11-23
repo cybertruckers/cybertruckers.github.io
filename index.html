@@ -4,136 +4,146 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>World of YDZ</title>
-    <style>
-        /* Reset and Layout */
-        html, body {
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-            overscroll-behavior-y: none;
-        }
-        
-        /* Background Sections: stack without gaps */
-        .background {
-            width: 100%;
-            height: 100vh;
-            background-size: cover;
-            background-position: center;
-        }
-        .bg1 { background-image: url('pumpkinbowlbg.jpeg'); }
-        .bg-ship { background-image: url('shipbg.jpeg'); }
-        .bg2 { background-image: url('beachbg.jpeg'); }
-
-        /* Header Bar */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 80px;
-            background: rgba(0, 0, 0, 0.4);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 0 20px;
-            z-index: 10;
-        }
-
-        /* Logo Image */
-        .logo {
-            width: 100px;
-            height: 100px;
-            object-fit: contain;
-        }
-
-        /* Dropdown Menu Positioned Right */
-        .dropdown {
-            position: absolute;
-            top: 50%;
-            right: 70px;
-            transform: translateY(-50%);
-        }
-        .menu-button {
-            width: 24px;
-            height: 24px;
-            background: none;
-            border: none;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            padding: 0;
-            cursor: pointer;
-        }
-        .menu-button span {
-            display: block;
-            width: 100%;
-            height: 3px;
-            background: white;
-            border-radius: 2px;
-        }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            top: 100%;
-            right: 0;
-            background-color: rgba(0,0,0,0.8);
-            min-width: 120px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            border-radius: 8px;
-            font-family: Arial, sans-serif;
-            overflow: hidden;
-        }
-        .dropdown-content a {
-            color: white;
-            padding: 10px;
-            text-decoration: none;
-            display: block;
-            text-align: center;
-        }
-        .dropdown-content a:hover {
-            background: rgba(255,255,255,0.2);
-        }
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        /* Footer */
-        footer {
-            background: black;
-            color: white;
-            text-align: center;
-            padding: 6px 0; /* Thinner footer */
-            position: relative;
-            z-index: 5;
-            font-family: Arial, sans-serif;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header with Centered Logo and Hamburger Menu -->
-    <header>
-        <a href="index.html"><img src="logo1.png" alt="Logo" class="logo"></a>
-        <div class="dropdown">
-            <button class="menu-button">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <div class="dropdown-content">
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-            </div>
+    <header class="nav-bar">
+        <div class="brand">
+            <img src="logo1.png" alt="YDZ logo">
+            <span>World of YDZ</span>
         </div>
+        <nav>
+            <a href="#projects">Projects</a>
+            <a href="#art">Art</a>
+            <a href="#play">Playground</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
     </header>
 
-    <!-- Background Sections -->
-    <div class="background bg1"></div>
-    <div class="background bg-ship"></div>
-    <div class="background bg2"></div>
+    <section class="hero hero-home" id="top">
+        <div class="content">
+            <div class="badge-row">
+                <span class="badge">Creative coder</span>
+                <span class="badge">Visual tinkerer</span>
+                <span class="badge">Curious human</span>
+            </div>
+            <h1>Fluid, playful experiments by Yuanda Zhang.</h1>
+            <p class="lede">Welcome to my personal playground. I blend code, art, and imagination into colorful experiences, interactive installations, and thoughtful projects. Scroll to explore the things I've been building and dreaming up lately.</p>
+            <div class="cta-row">
+                <a class="btn" href="#projects">See the latest builds →</a>
+                <a class="btn secondary" href="about.html">Learn the story</a>
+            </div>
+            <div class="stats">
+                <div class="stat-card">
+                    <strong>18+</strong>
+                    <span>Shipped projects & prototypes</span>
+                </div>
+                <div class="stat-card">
+                    <strong>40+</strong>
+                    <span>Visual experiments & sketches</span>
+                </div>
+                <div class="stat-card">
+                    <strong>∞</strong>
+                    <span>Ideas in motion</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Footer Always at Bottom -->
-    <footer>
-        <p>&copy; 2025 Yuanda Zhang | Built with devotion</p>
+    <main class="container">
+        <section id="projects" class="section">
+            <div class="section-header">
+                <h2>Projects that make me smile</h2>
+                <p>Selected builds spanning code, design, and curiosity.</p>
+            </div>
+            <div class="grid">
+                <article class="card">
+                    <span class="tag">Interactive Web</span>
+                    <h3>Cyber Odyssey</h3>
+                    <p>A neon-soaked journey through generative cityscapes with live controls and soundtrack reactive visuals.</p>
+                </article>
+                <article class="card">
+                    <span class="tag">Data + Story</span>
+                    <h3>Story Maps</h3>
+                    <p>An illustrated atlas of memories, stitched together with custom illustrations and playful micro-interactions.</p>
+                </article>
+                <article class="card">
+                    <span class="tag">Creative Coding</span>
+                    <h3>Motion Poems</h3>
+                    <p>Typographic experiments that swirl, bend, and bloom in response to music, mood, and curiosity.</p>
+                </article>
+                <article class="card">
+                    <span class="tag">Physical/Digital</span>
+                    <h3>Lightfield</h3>
+                    <p>A set of modular LED tiles choreographed by sensors, letting people paint the room with motion.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="art" class="section">
+            <div class="section-header">
+                <h2>Art & sketchbook</h2>
+                <p>Small moments of wonder, captured in pixels and pigments.</p>
+            </div>
+            <div class="highlight-row">
+                <div class="highlight">
+                    <h3>Illustrations</h3>
+                    <p>Dreamy worlds with warm oranges and cool blues, inspired by city lights and late-night walks.</p>
+                </div>
+                <div class="highlight">
+                    <h3>Motion studies</h3>
+                    <p>Loops and kinetic typography experiments that feel like visual jazz improvisations.</p>
+                </div>
+                <div class="highlight">
+                    <h3>Photography</h3>
+                    <p>Quiet portraits, architectural geometry, and the occasional cinematic street shot.</p>
+                </div>
+            </div>
+            <div class="gallery" style="margin-top: 18px;">
+                <div class="gallery-tile">
+                    Vibrant gradients
+                    <small>— exploring new palettes</small>
+                </div>
+                <div class="gallery-tile">
+                    Sketchbook scans
+                    <small>— charcoal + watercolor blends</small>
+                </div>
+                <div class="gallery-tile">
+                    Album artwork
+                    <small>— covers for friends' releases</small>
+                </div>
+                <div class="gallery-tile">
+                    UI Artifacts
+                    <small>— playful buttons & cursors</small>
+                </div>
+            </div>
+        </section>
+
+        <section id="play" class="section">
+            <div class="section-header">
+                <h2>Playground & pursuits</h2>
+                <p>Places where I practice, learn, and share.</p>
+            </div>
+            <div class="grid">
+                <article class="card">
+                    <h3>Learning Lab</h3>
+                    <p>Diving into shaders, new frameworks, and AI-assisted artistry—documented through open notebooks.</p>
+                </article>
+                <article class="card">
+                    <h3>Work-in-progress</h3>
+                    <p>Early glimpses of experiments before they’re polished, because the process is the best part.</p>
+                </article>
+                <article class="card">
+                    <h3>Collaborations</h3>
+                    <p>Partnering with musicians, designers, and makers to blend disciplines and spark new ideas.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Yuanda Zhang — Crafted with curiosity and bright colors.</p>
     </footer>
 </body>
 </html>
