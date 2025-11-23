@@ -3,26 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+    <title>About | World of YDZ</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>About Me</h1>
+    <header class="nav-bar">
+        <div class="brand">
+            <img src="logo1.png" alt="YDZ logo">
+            <span>World of YDZ</span>
+        </div>
         <nav>
             <a href="index.html">Home</a>
-            <a href="about.html">About</a>
+            <a href="#story">Story</a>
+            <a href="#skills">Skills</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
 
-    <section class="content">
-        <h2>Who Am I?</h2>
-        <p>This is where you can introduce yourself. Talk about what you do and what this website is for.</p>
+    <section class="page-hero">
+        <h1>About Me</h1>
+        <p>Designer, developer, and artist exploring the edges where imagination meets technology.</p>
     </section>
 
-    <footer>
-        <p>&copy; 2025 My Website</p>
+    <div class="text-card" id="story">
+        <h2>The longer story</h2>
+        <p>I build things that feel alive—interactive websites, immersive visuals, and tools that help people express themselves. My work lives at the intersection of storytelling and systems thinking, borrowing from architecture, motion design, and playful experimentation.</p>
+        <p>When I’m not behind a screen, you’ll find me sketching scenes from city life, capturing cinematic photographs, or cooking elaborate meals for friends. Everything I do feeds back into the art.</p>
+    </div>
+
+    <div class="text-card" id="skills">
+        <h2>What I’m great at</h2>
+        <ul class="list-grid">
+            <li>Designing expressive digital interfaces with motion-first thinking.</li>
+            <li>Creative coding across the web—WebGL, canvas, and responsive layouts.</li>
+            <li>Story-driven visuals for music, events, and brands.</li>
+            <li>Rapid prototyping and collaboration with multidisciplinary teams.</li>
+        </ul>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Yuanda Zhang — Always learning, always exploring.</p>
     </footer>
 </body>
 </html>
