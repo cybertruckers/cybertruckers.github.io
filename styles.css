@@ -289,9 +289,11 @@ nav a:focus-visible {
 }
 
 .about-centered-block img {
-    width: min(560px, 100%);
-    aspect-ratio: 4 / 5;
+    width: 320px;
+    height: 420px;
+    max-width: 90vw;
     object-fit: cover;
+    object-position: center;
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.16);
     box-shadow: var(--shadow);
