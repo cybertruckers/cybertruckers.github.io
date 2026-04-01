@@ -272,6 +272,12 @@ nav a:focus-visible {
     font-size: 1.05rem;
 }
 
+
+.single-page-main {
+    padding-top: 36px;
+    padding-bottom: 80px;
+}
+
 /* Card Grid */
 .grid {
     display: grid;
