@@ -52,6 +52,8 @@ a {
     gap: 10px;
     font-weight: 700;
     letter-spacing: 0.4px;
+    text-decoration: none;
+    color: var(--text);
 }
 
 .brand img {
@@ -289,13 +291,14 @@ nav a:focus-visible {
 }
 
 .about-centered-block img {
-    width: 320px;
-    height: 420px;
+    width: 420px;
+    height: 315px;
     max-width: 90vw;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.16);
+    background: rgba(255, 255, 255, 0.04);
     box-shadow: var(--shadow);
 }
 
